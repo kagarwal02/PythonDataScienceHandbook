@@ -1,0 +1,40 @@
+1.01 
+? Gives documentation for the basically anything
+?? Gives documentation and source code sometimes
+<TAB> gives completed suggestions for attributes
+
+1.02
+GO HERE FOR KEYBOARD SHORTCUTS
+
+1.03
+%paste and %cpaste above the pasted code allows for copy-pasting large blocks of code
+%run filename runs the file in another file
+%timeit determines the execution time of the line that follows it
+
+1.04
+print(In/Out) prints a list of input/output history
+Underscore represents previous output
+	works for up to 3 underscores
+Adding ; at the end of a line suppresses its output
+
+1.05
+http://swcarpentry.github.io/shell-novice/  <- shell tutorial
+echo is the terminal version of print function
+pwd displays current file path
+! Before command allows terminal commands to work in Python
+
+1.06
+%xmode controls the amount of information printed in an error message
+	Plain- compact
+	Verbose- extra information including function arguments
+%debug opens an interactive debugging prompt
+%pdb on automatically opens the debugger
+
+1.07
+%time: Time the execution of a single statement
+%timeit: Time repeated execution of a single statement for more accuracy
+%prun: Run code with the profiler
+%lprun: Run code with the line-by-line profiler
+%memit: Measure the memory use of a single statement
+%mprun: Run code with the line-by-line memory profiler
+Double % sign allows for timing of multiline scripts
