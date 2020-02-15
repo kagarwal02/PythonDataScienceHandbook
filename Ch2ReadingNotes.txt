@@ -1,0 +1,103 @@
+2.01
+Integers in python are actually references to a compound C structure that has four values: 
+- a reference count variable
+- a type variable
+- a size variable
+- a variable that represents the actual integer value
+list(range(10)) creates a list of integers 0-9
+Lists can contain multiple data types
+Arrays are uniform types, and lists can be converted to arrays
+NumPy is constrained to arrays
+np.array creates arrays from python lists
+np.zeros() creates arrays of zeros
+np.ones() creates arrays of ones
+np.full() creates arrays of one number/value
+np.arrange() creates arrays filled with a linear sequence
+np.linspace() creates arrays with evenly spaced elements
+np.random.random() creates arrays of random numbers
+np.eye() creates identity matrix
+
+2.02
+arrName.
+-ndim gives number of dim
+- shape gives shape
+- size gives num of elements
+- dtype gives data type
+You can index from the end of an array with arr[-1] (starts at -1)
+x[start:stop:step]
+arr.copy() copies an array
+np.reshape((man)) reshapes an array to be men
+np.concatenate([x,y]) adds y to x
+- if 2D, adds the other array as new row
+np.split(arr, i) splits array at index i
+
+
+2.03
+Using a vectorized approach is almost always more efficient
+*see lists of np ufuncs*
+np.abs(), np trig functions
+np.exp(x) = e^x
+np.exp2(x) = 2^x
+np.exp3(x) = 3^x
+np.log(x) = lnx
+np.log10(x) = log x
+np.accumulate(x) uses intermediate steps for Ufunc operation
+np.outer() allows for the creation of a multiplication table
+
+2.04
+NaN safe functions compute the result of the function with ignoring missing values
+Just add nan before the name of the method to do them
+
+2.05
+Broadcasting- a set of rules for applying binary Ufuncs on arrays of different sizes
+3x3 array plus 1x3 adds the 1x3 to each row of the 3x3
+Arrays are stretched in different directions to be added to each other
+Rules:
+1. If the two arrays differ in their numbers of dim, the shape of the one with fewer dim is padded with ones on its leading side
+2. If the shape of the two arrays does not match in any dim, the array with shape equal to 1 in that dim is stretched to match the other shape
+3: If in any dim the sizes disagree and neither is equal to 1, an error is raised
+
+
+2.06
+Comparison operators operate on each individual element of an array
+*see np comparison operators*
+np.count_nonzero(condition) counts the number of elements where that condition is true
+- so does np.sum()
+np.all() checks if all fit a condition
+np.any() checks if any fit a condition
+x < 5 returns boolean array 
+x[x<5] returns array of elements less than 5
+"and" and "or" operators use the object as a whole while & and | use the individual bits of the object
+
+2.07
+You can use an array to access the elements of a different array with those indices
+Ex: ind = [3,4,7]
+	x[ind]
+	Returns the elements of x at those indices
+Can be used to select random points
+np.add.at() allows for repeated addition to one index
+
+2.08
+Selection sort finds the min value in a list and makes swaps until the list is sorted
+Bogosort randomly shuffles an array until it is sorted
+np.sort() sorts an arr
+np.argsort() returns the indices of the sorted array
+axis=0 -> columns
+axis=1 -> rows
+np.partition(x, k) returns array x with the k smallest numbers on the left
+*see algorithm to find k nearest points*
+
+2.09
+Some data types:
+-U10 = Unicode string of max Len 10
+- i4 = 4 byte integer
+- f8 = 8 byte float
+RecordArray features can be accessed as attributes rather than as dictionary keys
+
+
+
+
+
+
+
+
